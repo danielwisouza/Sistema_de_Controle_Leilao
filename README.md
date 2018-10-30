@@ -20,10 +20,10 @@
 #### 1. Listagem dos leilões registrados no sistema, ordenados por data de ocorrência;
 #### 2. Detalhamento de um leilão específico, apresentando seu detalhes (lista de produtos ordenado por nome, entidade financeira associada, dados do leilão, quantidade total de produtos e demais dados pertinentes ao domínio);
 #### 3. Detalhamento de um produto associado ao leilão detalhado, apresentando todos os dados pertinentes ao detalhe do produto registrado;
-##### 4. Filtro de busca de produtos em um leilão por:
-###### a. Faixa de valores (min < R$ < max), sendo os valores mínimos e máximos informados pelo usuário;
-###### b. Palavra chave contida no nome do produto ou na descrição do produto; e
-###### c. Tipo de produto.
+#### 4. Filtro de busca de produtos em um leilão por:
+##### a. Faixa de valores (min < R$ < max), sendo os valores mínimos e máximos informados pelo usuário;
+##### b. Palavra chave contida no nome do produto ou na descrição do produto; e
+##### c. Tipo de produto.
 
 #### 5. Possibilitar a um cliente previamente cadastrado no sistema dar um lance de valor (R$) para um produto específico – As devidas validações deverão ser mapeadas e implementadas pelos membros do grupo em relação à regras de consistência dos lances registrados;
 #### 6. Apresentação do histórico de lances realizado para um produto específico, destacando o produto, cliente e valor do lance – Ordenação pelo ID do lance correspondente;
@@ -37,7 +37,7 @@
 #### 10. Toda e qualquer persistência de dados da aplicação deverá ser implementada em memória, simulando os registros de Objetos que seriam persistidos na base de dados, porém mantendo-os na memória. Consultas, registros, atualização e remoções deverão ser realizadas na estrutura usada para armazenar tais registros;
 #### 11. Todas as funcionalidades deverão ser implementadas minimamente através de menus e interfaces simples via console, que possibilitem informar as diversas entradas de dados, e efetivar todas as operações necessárias; e
 #### 12. O código fonte do projeto do trabalho implementado deverá ter minimamente 70% de cobertura de código validados por Teste de Unidade (30% da nota total do trabalho).
-#### Diferenciais relevantes com Pontuação Extra:
+### Diferenciais relevantes com Pontuação Extra:
 
-##### 1. Implementação das funcionalidades utilizando API gráfica Swing do próprio Java, para todas as funcionalidades do trabalho (1,5 de acréscimo na media final) –Referência: Java como Programar – 6ª, 7ª ou 8ª edição – Paul J. Deitel (Há referências a biblioteca).
+#### 1. Implementação das funcionalidades utilizando API gráfica Swing do próprio Java, para todas as funcionalidades do trabalho (1,5 de acréscimo na media final) –Referência: Java como Programar – 6ª, 7ª ou 8ª edição – Paul J. Deitel (Há referências a biblioteca).
 
