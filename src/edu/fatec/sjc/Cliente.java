@@ -3,30 +3,24 @@ package edu.fatec.sjc;
 
 public class Cliente {
 	
-	private String CPF;
 	private String nome;
 	private String senha;
+	private String email;
 	private String certificadoDigital;
-	private Leilao leilao;
-	private String lances;
+	private String leilao;
+	private int lances;
 	
-	public Cliente(String cpf, String nome, String senha, String certificadoDigital, Leilao leilao, String lance) {
-		this.CPF = cpf;
+	public Cliente(String email, String nome, String senha, String certificadoDigital, String leilao) {
+		this.email = email;
 		this.nome = nome;
 		this.senha = senha;
 		this.certificadoDigital = certificadoDigital;
 		this.leilao = leilao;
-		this.lances = lance;
 	}
 	
 	
 
-	public String getCPF() {
-		return CPF;
-	}
-	public void setCPF(String cpf) {
-		CPF = cpf;
-	}
+	
 	public String getNome() {
 		return nome;
 	}
@@ -47,12 +41,21 @@ public class Cliente {
 	}
 	
 	public String toString(){
-		return "\nNome:"+ this.nome + ", CPF:"+this.CPF + ", Certificado Digital: " + this.certificadoDigital+", Leilao: "+this.leilao+",Lance: "+this.lances;
+		return "\nNome:"+ this.nome + ",E-mail:"+this.email + ", Certificado Digital: " + this.certificadoDigital+", Leilao: "+this.leilao+",Lance: "+this.lances;
 	}
 
 
 
-	public Leilao getLeilao() {
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	/*public Leilao getLeilao() {
 		return leilao;
 	}
 
@@ -67,7 +70,7 @@ public class Cliente {
 	}
 	public void setLances(String lances) {
 		this.lances = lances;
-	}
+	}*/
 	
 	
 

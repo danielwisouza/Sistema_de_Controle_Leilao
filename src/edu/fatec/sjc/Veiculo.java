@@ -3,11 +3,11 @@ package edu.fatec.sjc;
 public class Veiculo {
 	
 	private String marca;
-	private Integer ano;
+	private String ano;
 	private String modelo;
 	
 	
-	public Veiculo(String marca, Integer ano, String modelo) {
+	public Veiculo(String marca, String ano, String modelo) {
 		this.marca = marca;
 		this.ano = ano;
 		this.modelo = modelo;
@@ -19,10 +19,10 @@ public class Veiculo {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	public Integer getAno() {
+	public String getAno() {
 		return ano;
 	}
-	public void setAno(Integer ano) {
+	public void setAno(String ano) {
 		this.ano = ano;
 	}
 	public String getModelo() {
