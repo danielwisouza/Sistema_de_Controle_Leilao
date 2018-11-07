@@ -9,7 +9,8 @@ public class Leilao {
 	private InstituicaoFinanceira instFin;
 	private Date data;
 	private String endereco;
-	//private Cliente cliente;
+	
+	
 	private java.lang.Object tipo;
 	
 	
@@ -20,7 +21,6 @@ public class Leilao {
 		this.instFin = instFin;
 		this.data = data;
 		this.endereco = endereco;
-		//this.cliente = cliente;
 	}
 
 	public Integer getNumeroLeilao() {
@@ -54,17 +54,8 @@ public class Leilao {
 		this.instFin = instFin;
 	}
 	
-	/*public Cliente getCliente() {
-		return cliente;
-	}
-
-	public void setCliente(Cliente cliente) {
-		this.cliente = cliente;
-	}*/
 	
-	public String toString(){
-		return "\nNumero do Leilao:"+ this.numeroLeilao + ", Lote:"+this.loteProdutos + ", Instituição Financeira: " + this.instFin +", Data: "+ data +", Endereço: "+endereco+", Tipo: "+tipo;
-	}
+	
 
 	public Object getTipo() {
 		return tipo;
@@ -74,6 +65,11 @@ public class Leilao {
 		this.tipo = tipo;
 	}
 
+	
+
+	public String toString(){
+		return "\nNumero do Leilao:"+ this.numeroLeilao + ", Lote:"+this.loteProdutos + ", Instituição Financeira: " + this.instFin +", Data: "+ data +", Endereço: "+endereco+", Tipo: "+tipo;
+	}
 	
 	
 }

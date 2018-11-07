@@ -9,18 +9,21 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
-public class Cadastro {
+public class Model {
 	
 	//Variáveis utilizadas nos métodos
 	private Scanner le;
-	private String cpf, nome, senha, certDig, cnpj, 
+	private String nome, senha, certDig, cnpj, 
 	registro, endereco, descricao, loteProdutos, marca, 
-	modelo, numLeilao, ano, numLote, tipo;
+	modelo, numLeilao, ano, numLote, tipo, email;
 	private Date data;
 	
-	//PessoaFisicas
-	private static ArrayList <PessoaFisica>pessoasFisicas = new ArrayList<PessoaFisica>();
+	//Instanciando enuns
+	TipoVeiculo tipoVeic;
+	TipoImovel tipoImovel;
 	
+	//Clientes
+	private static ArrayList <Cliente>clientes = new ArrayList<Cliente>();
 	
 	//Imóvel
 	private static ArrayList <Imovel>imoveis = new ArrayList<Imovel>();
@@ -38,8 +41,8 @@ public class Cadastro {
 	static ArrayList <Lote> lotes = new ArrayList<Lote>();
 	
 
-	public Cadastro() {
-		PessoaFisicas = new ArrayList<>();
+	public Model() {
+		clientes = new ArrayList<>();
 		imoveis = new ArrayList<>();
 		instFinanceiras = new ArrayList<>();
 		leiloes = new ArrayList<>();
@@ -51,54 +54,63 @@ public class Cadastro {
 	
 	
 
-	public void salvarPessoaFisica(ArrayList<PessoaFisica> PessoaFisicas) throws Exception {
+	public void salvarCliente(ArrayList<Cliente> Clientes) throws Exception {
 		FileOutputStream saida = new FileOutputStream("cadastro.txt");
 		ObjectOutputStream saidaO = new ObjectOutputStream(saida);
-		saidaO.writeObject(PessoaFisicas);
+		saidaO.writeObject(Clientes);
 		saidaO.close();
 	}
 
 	@SuppressWarnings({ "resource", "unchecked" })
-	public void receberPessoaFisica() throws Exception {
+	public void receberCliente() throws Exception {
 		FileInputStream entrada = new FileInputStream("cadastro.txt");
 		ObjectInputStream entradaO = new ObjectInputStream(entrada);
-		ArrayList<PessoaFisica> c = (ArrayList<PessoaFisica>) entradaO.readObject();
-		PessoaFisicas = c;
+		ArrayList<Cliente> c = (ArrayList<Cliente>) entradaO.readObject();
+		clientes = c;
 	}
 
 	public void GetDB() {
 
 		try {
-			receberPessoaFisica();
+			receberCliente();
 		} catch (Exception e) {
 		}
 
 	}
 
 
-	void inserirPessoaFisica() {
-		System.out.println("CPF: ");
-		cpf = le.nextLine();
+	void inserirCliente() {
+		
 		System.out.println("Nome: ");
 		nome = le.nextLine();
+		System.out.println("E-mail: ");
+		email = le.nextLine();
 		System.out.println("Senha: ");
 		nome = le.nextLine();
 		System.out.println("Numero de Certificado Digital: ");
 		certDig = le.nextLine();
 		System.out.println("Numero do Leilao: ");
 		numLeilao = le.nextLine();
+		System.out.println("Numero do Leilao: ");
+		numLeilao = le.nextLine();
 		
 
-		PessoaFisicas.add(new PessoaFisica ( cpf, nome, senha, certDig, numLeilao));
+		clientes.add(new Cliente (nome, email, senha, certDig, numLeilao));
 
 		System.out.println("Cadastrado!!!");
 	}
+	
+	
 	
 	void inserirImovel() {
 		System.out.println("Registro: ");
 		registro = le.nextLine();
 		System.out.println("Endereço: ");
 		endereco = le.nextLine();
+		System.out.println("Digite uma das opções referente ao tipo do Imóvel:");
+		System.out.println("\nApartamentos, Terrenos, Casas, Edifícios Comerciais");
+		tipo = le.nextLine();
+			//if(tipo == )
 		System.out.println("Descrição: ");
 		descricao = le.nextLine();
 		
@@ -155,8 +167,8 @@ public class Cadastro {
 	
 	void imprimir() {
 		int id = 0;
-		for (PessoaFisica PessoaFisica : PessoaFisicas) {
-			System.out.println("CPF: " + PessoaFisica.getCPF() + " | Nome: " + PessoaFisica.getNome() + "  \t| Certificado Digital: " + PessoaFisica.getCertificadoDigital());
+		for (Cliente Cliente : clientes) {
+			System.out.println(" | Nome: " + Cliente.getNome() + "  \t| Certificado Digital: " + Cliente.getCertificadoDigital());
 			id++;
 		}
 		
@@ -171,12 +183,12 @@ public class Cadastro {
 		}
 	}
 
-	void removerPessoaFisica() {
+	void removerCliente() {
 		imprimir();
 		System.out.println("Seleciona o ID: ");
 		int i = le.nextInt();
 		le.nextLine();
-		PessoaFisicas.remove(i);
+		clientes.remove(i);
 		System.out.println("Removido!!!");
 	}
 

@@ -7,15 +7,16 @@ public class Cliente {
 	private String senha;
 	private String email;
 	private String certificadoDigital;
-	private String leilao;
-	private int lances;
+	private Leilao leilao;
+	private Lance lances;
 	
-	public Cliente(String email, String nome, String senha, String certificadoDigital, String leilao) {
+	public Cliente(String email, String nome, String senha, String certificadoDigital, Leilao numLeilao, Lance lances) {
 		this.email = email;
 		this.nome = nome;
 		this.senha = senha;
 		this.certificadoDigital = certificadoDigital;
-		this.leilao = leilao;
+		this.leilao = numLeilao;
+		this.lances = lances;
 	}
 	
 	
