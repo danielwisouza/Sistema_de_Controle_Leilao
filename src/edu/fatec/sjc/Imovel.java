@@ -2,6 +2,7 @@ package edu.fatec.sjc;
 
 public class Imovel {
 	
+	private Integer id;
 	private String registro;
 	private String endereco;
 	private String descricao;
@@ -36,6 +37,14 @@ public class Imovel {
 	
 	public String toString(){
 		return "\nIMÓVEL - Número de Registro:"+ this.registro + ", Endereço:"+this.endereco + ", Descrição: " + this.descricao;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

@@ -2,6 +2,7 @@ package edu.fatec.sjc;
 
 public class Veiculo {
 	
+	private Integer id;
 	private String marca;
 	private String ano;
 	private String modelo;
@@ -34,6 +35,14 @@ public class Veiculo {
 	
 	public String toString(){
 		return "\nVEÍCULO - Marca:"+ this.marca + ", Ano:"+this.ano + ", Modelo: " + this.modelo;
+	}
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 }

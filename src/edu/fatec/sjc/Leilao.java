@@ -5,21 +5,21 @@ import java.util.Date;
 public class Leilao {
 	
 	private Integer numeroLeilao;
-	private String loteProdutos;
-	private InstituicaoFinanceira instFin;
+	private Integer loteProdutos;
+	private String instFin;
 	private Date data;
 	private String endereco;
 	
 	
-	private java.lang.Object tipo;
+	private Object tipo;
 	
 	
-	public Leilao(Integer numeroLeilao,String loteProdutos, Object tipo, InstituicaoFinanceira instFin, Date data, String endereco) {
+	public Leilao(Integer numeroLeilao,Integer loteProdutos, String instFin,  String endereco) {
 		this.numeroLeilao = numeroLeilao;
 		this.loteProdutos = loteProdutos;
-		this.tipo = tipo;
+		//this.tipo = tipo;
 		this.instFin = instFin;
-		this.data = data;
+		//this.data = data;
 		this.endereco = endereco;
 	}
 
@@ -29,10 +29,10 @@ public class Leilao {
 	public void setNumeroLeilao(Integer numeroLeilao) {
 		this.numeroLeilao = numeroLeilao;
 	}
-	public String getLoteProdutos() {
+	public Integer getLoteProdutos() {
 		return loteProdutos;
 	}
-	public void setLoteProdutos(String loteProdutos) {
+	public void setLoteProdutos(Integer loteProdutos) {
 		this.loteProdutos = loteProdutos;
 	}
 	public Date getData() {
@@ -47,23 +47,23 @@ public class Leilao {
 	public void setEndereco(String endereco) {
 		this.endereco = endereco;
 	}
-	public InstituicaoFinanceira getInstFin() {
+	public String getInstFin() {
 		return instFin;
 	}
-	public void setInstFin(InstituicaoFinanceira instFin) {
+	public void setInstFin(String instFin) {
 		this.instFin = instFin;
 	}
 	
 	
 	
 
-	public Object getTipo() {
+	/*public Object getTipo() {
 		return tipo;
 	}
 
 	public void setTipo(Object tipo) {
 		this.tipo = tipo;
-	}
+	}*/
 
 	
 

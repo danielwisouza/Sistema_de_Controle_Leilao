@@ -7,20 +7,18 @@ public class Cliente {
 	private String senha;
 	private String email;
 	private String certificadoDigital;
-	private Leilao leilao;
+	//private Leilao leilao;
 	private Lance lances;
+	private Integer numLeilao;
 	
-	public Cliente(String email, String nome, String senha, String certificadoDigital, Leilao numLeilao, Lance lances) {
+	public Cliente(String email, String nome, String senha, String certificadoDigital, Integer numLeilao, Lance lances) {
 		this.email = email;
 		this.nome = nome;
 		this.senha = senha;
 		this.certificadoDigital = certificadoDigital;
-		this.leilao = numLeilao;
+		this.numLeilao = numLeilao;
 		this.lances = lances;
 	}
-	
-	
-
 	
 	public String getNome() {
 		return nome;
@@ -42,7 +40,7 @@ public class Cliente {
 	}
 	
 	public String toString(){
-		return "\nNome:"+ this.nome + ",E-mail:"+this.email + ", Certificado Digital: " + this.certificadoDigital+", Leilao: "+this.leilao+",Lance: "+this.lances;
+		return "\nNome:"+ this.nome + ",E-mail:"+this.email + ", Certificado Digital: " + this.certificadoDigital+ ", Lance:" +this.lances;
 	}
 
 

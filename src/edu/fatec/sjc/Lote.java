@@ -4,17 +4,25 @@ package edu.fatec.sjc;
 public class Lote {
 	
 	
-	private String numLote;
+	private Integer numLote;
+	private Integer qtdeProd[];
+	
 	private Object tipo;
 	private Leilao leilao;
 	private Imovel imovel;
 	private Veiculo veiculo;
 	
-	public String getNumLote() {
+	public Lote(Integer numLote, Integer qtdeProd[]) {
+		this.numLote = numLote;
+		this.qtdeProd=qtdeProd;
+	}
+	
+	
+	public Integer getNumLote() {
 		return numLote;
 	}
 
-	public void setNumLote(String numLote) {
+	public void setNumLote(Integer numLote) {
 		this.numLote = numLote;
 	}
 
@@ -48,6 +56,16 @@ public class Lote {
 
 	public void setVeiculo(Veiculo veiculo) {
 		this.veiculo = veiculo;
+	}
+
+
+	public Integer[] getQtdeProd() {
+		return qtdeProd;
+	}
+
+
+	public void setQtdeProd(Integer qtdeProd[]) {
+		this.qtdeProd = qtdeProd;
 	}
 	
 }
