@@ -82,7 +82,7 @@ public class Model {
 
 	void darLances() {
 		System.out.println("Numero de Certificado Digital: ");
-		certDig = le.nextLine();
+		certDig = le.next();
 
 		for (Cliente cliente : clientes) {
 			if (certDig != cliente.getCertificadoDigital()) {
@@ -112,13 +112,13 @@ public class Model {
 	void inserirCliente() {
 
 		System.out.println("Nome: ");
-		nome = le.nextLine();
+		nome = le.next();
 		System.out.println("E-mail: ");
-		email = le.nextLine();
+		email = le.next();
 		System.out.println("Senha: ");
-		nome = le.nextLine();
+		nome = le.next();
 		System.out.println("Numero de Certificado Digital: ");
-		certDig = le.nextLine();
+		certDig = le.next();
 
 		clientes.add(new Cliente(nome, email, senha, certDig, null, null));
 
@@ -129,15 +129,15 @@ public class Model {
 		System.out.println("Id: ");
 		id = le.nextInt();
 		System.out.println("Registro: ");
-		registro = le.nextLine();
+		registro = le.next();
 		System.out.println("Endereço: ");
-		endereco = le.nextLine();
+		endereco = le.next();
 		System.out.println("Digite uma das opções referente ao tipo do Imóvel:");
 		System.out.println("\nApartamentos, Terrenos, Casas, Edifícios Comerciais");
-		tipo = le.nextLine();
+		tipo = le.next();
 		// if(tipo == )
 		System.out.println("Descrição: ");
-		descricao = le.nextLine();
+		descricao = le.next();
 
 		imoveis.add(new Imovel(registro, endereco, descricao));
 		System.out.println("Cadastrado!!!");
@@ -147,20 +147,20 @@ public class Model {
 		System.out.println("Id: ");
 		id = le.nextInt();
 		System.out.println("Marca: ");
-		marca = le.nextLine();
+		marca = le.next();
 		System.out.println("Ano: ");
-		ano = le.nextLine();
+		ano = le.next();
 		System.out.println("Modelo: ");
-		modelo = le.nextLine();
+		modelo = le.next();
 	}
 
 	void inserirInstFin() {
 		System.out.println("CNPJ: ");
-		cnpj = le.nextLine();
+		cnpj = le.next();
 		System.out.println("Nome: ");
-		nome = le.nextLine();
+		nome = le.next();
 		System.out.println("Endereco: ");
-		endereco = le.nextLine();
+		endereco = le.next();
 
 		instFinanceiras.add(new InstituicaoFinanceira(cnpj, nome, endereco));
 		System.out.println("Cadastrado!!!");

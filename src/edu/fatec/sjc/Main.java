@@ -29,11 +29,12 @@ public class Main {
 		resposta = Integer.parseInt(JOptionPane.showInputDialog("Digite o que deseja fazer :"
 	            + "\n1 - Cadastro de Usuário (Cliente)"
 	            + "\n2 - Cadastro de Instituição Financeira"
-	            + "\n3 - Cadastro de Imóveis"
-	            + "\n4 - Cadastro de Veículos"
-	            + "\n5 - Cadastro de Leilões"
-	            + "\n6 - Imprimir Leilões"
-	            + "\n7 - Sair"));
+	            + "\n3 - Cadastro de Imóvel"
+	            + "\n4 - Cadastro de Veículo"
+	            + "\n5 - Cadastro de Leilão"
+	            + "\n6 - Cadastro de Lote"
+	            + "\n7 - Imprimir Leilões"
+	            + "\n8 - Sair"));
 
 		
 	    switch(resposta){
@@ -53,9 +54,12 @@ public class Main {
 	        	model.inserirLeilao();
 	        break;
 	        case 6 :
-	        	model.imprimirLeiloes();
+	        	model.inserirLote();
 	        break;
 	        case 7 :
+	        	model.imprimirLeiloes();
+	        break;
+	        case 8 :
 	        	System.out.println("Processo Finalizado");
 	        break;
 	        
