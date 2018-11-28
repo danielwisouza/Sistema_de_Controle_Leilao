@@ -3,15 +3,20 @@ package edu.fatec.sjc;
 public class Veiculo {
 	
 	private Integer id;
+	private String tipo;
 	private String marca;
 	private String ano;
 	private String modelo;
+	private String descricao;
 	
 	
-	public Veiculo(String marca, String ano, String modelo) {
+	public Veiculo(Integer id, String tipo, String marca, String ano, String modelo, String descricao) {
+		this.id = id;
+		this.tipo=tipo;
 		this.marca = marca;
 		this.ano = ano;
 		this.modelo = modelo;
+		this.descricao = descricao;
 	}
 	
 	public String getMarca() {
@@ -43,6 +48,22 @@ public class Veiculo {
 
 	public void setId(Integer id) {
 		this.id = id;
+	}
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
 	}
 
 }

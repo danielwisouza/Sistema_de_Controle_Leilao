@@ -6,11 +6,12 @@ public class Lance {
 	private long id;
 	private Integer valor;
 	private Cliente cliente;
-	private Leilao leilao;
+	private Integer numLeilao;
 	
-	public Lance(Integer valor, Cliente cliente) {
+	public Lance(Integer valor, Cliente cliente, Integer numLeilao) {
 		this.valor = valor;
 		this.cliente = cliente;
+		this.numLeilao = numLeilao;
 	}
 	
 	
@@ -43,7 +44,7 @@ public class Lance {
 
 
 
-	public Leilao getLeilao() {
+	/*public Leilao getLeilao() {
 		return leilao;
 	}
 
@@ -52,6 +53,20 @@ public class Lance {
 
 	public void setLeilao(Leilao leilao) {
 		this.leilao = leilao;
+	}*/
+
+
+
+
+	public Integer getNumLeilao() {
+		return numLeilao;
+	}
+
+
+
+
+	public void setNumLeilao(Integer numLeilao) {
+		this.numLeilao = numLeilao;
 	} 
 
 }

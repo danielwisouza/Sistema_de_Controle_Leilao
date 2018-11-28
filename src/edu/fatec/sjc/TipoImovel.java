@@ -1,8 +1,8 @@
 package edu.fatec.sjc;
 
 public enum TipoImovel {
-	APARTAMENTOS("Apartamentos"), TERRENOS("Terrenos"), 
-	CASAS("Casas"), EDIFICIOS_COMERCIAIS("Edifícios Comerciais");
+	APARTAMENTOS("Apartamento"), TERRENOS("Terreno"), 
+	CASAS("Casa"), EDIFICIOS_COMERCIAIS("Edifício Comercial");
 	
 	private final String valor;
 	TipoImovel(String valorOpcao){

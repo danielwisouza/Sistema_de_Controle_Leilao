@@ -33,7 +33,21 @@ public class Main {
 	            + "\n4 - Cadastro de Veículo"
 	            + "\n5 - Cadastro de Leilão"
 	            + "\n6 - Cadastro de Lote"
-	            + "\n7 - Imprimir Leilões"
+	            + "\n7 - Imprimir Clientes"
+	            + "\n9 - Remover Clientes"
+	            + "\n10 - Imprimir Imoveis"
+	            + "\n11 - Remover Imoveis"
+	            + "\n12 - Imprimir Veiculos"
+	            + "\n13 - Remover Veiculos"
+	            + "\n14 - Imprimir Instituição Financeira"
+	            + "\n15 - Remover Instituição Financeira"
+	            + "\n16 - Imprimir Lote"
+	            + "\n17 - Remover Lote"
+	            + "\n18 - Imprimir Leilão"
+	            + "\n19 - Remover Leilão"
+	            + "\n20 - Dar Lance"
+	            + "\n20 - Imprimir Lances por Cliente"
+
 	            + "\n8 - Sair"));
 
 		
@@ -57,8 +71,48 @@ public class Main {
 	        	model.inserirLote();
 	        break;
 	        case 7 :
+	        	model.imprimirCliente();
+	        break;
+	        case 9 :
+	        	model.removerCliente();
+	        break;
+	        case 10 :
+	        	model.imprimirImoveis();
+	        break;
+	        case 11 :
+	        	model.removerImovel();
+	        break;
+	        case 12 :
+	        	model.imprimirVeiculos();
+	        break;
+	        case 13 :
+	        	model.removerVeiculo();
+	        break;
+	        case 14 :
+	        	model.imprimirInstFin();
+	        break;
+	        case 15 :
+	        	model.removerInstFin();
+	        break;
+	        case 16 :
+	        	model.imprimirLotes();
+	        break;
+	        case 17 :
+	        	model.removerLote();
+	        break;
+	        case 18 :
 	        	model.imprimirLeiloes();
 	        break;
+	        case 19 :
+	        	model.removerLeilao();
+	        break;
+	        case 20 :
+	        	model.darLances();
+	        break;
+	        case 21 :
+	        	model.imprimirLances();
+	        break;
+	        
 	        case 8 :
 	        	System.out.println("Processo Finalizado");
 	        break;
