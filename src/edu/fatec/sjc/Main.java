@@ -1,10 +1,10 @@
 package edu.fatec.sjc;
 
 
-import java.text.ParseException;
+//import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
+//import java.util.Date;
 import java.util.Scanner;
 
 import javax.swing.JOptionPane;
@@ -20,6 +20,7 @@ public class Main {
 		
 		
 		
+		@SuppressWarnings("unused")
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 		int resposta;
 		
@@ -46,8 +47,13 @@ public class Main {
 	            + "\n18 - Imprimir Leilão"
 	            + "\n19 - Remover Leilão"
 	            + "\n20 - Dar Lance"
-	            + "\n20 - Imprimir Lances por Cliente"
-
+	            + "\n21 - Imprimir Lances por Cliente"
+	            + "\n22 - Imprimir Lote específico"
+	            + "\n23 - Atualizar dados do Cliente"
+	            + "\n24 - Atualizar dados da Instituição Financeira"
+	            + "\n25 - Atualizar dados de Imóvel"
+	            + "\n26 - Atualizar dados de Veículo"
+	            
 	            + "\n8 - Sair"));
 
 		
@@ -112,6 +118,21 @@ public class Main {
 	        case 21 :
 	        	model.imprimirLances();
 	        break;
+	        case 22 :
+	        	
+	        break;
+	        case 23:
+	        	model.alterarCliente();
+		        break;
+	        case 24:
+	        	model.alterarInstFin();
+		        break;
+	        case 25:
+	        	model.alterarImovel();
+		        break;
+	        case 26:
+	        	model.alterarVeiculo();
+		        break;
 	        
 	        case 8 :
 	        	System.out.println("Processo Finalizado");

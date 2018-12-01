@@ -1,20 +1,23 @@
 package edu.fatec.sjc;
 
+import java.util.List;
 
 public class Lote {
 	
 	
 	private Integer numLote;
-	private Integer qtdeProd[];
+	private List <Integer> qtdeProd;
 	
 	private Object tipo;
 	private Leilao leilao;
 	private Imovel imovel;
 	private Veiculo veiculo;
 	
-	public Lote(Integer numLote, Integer qtdeProd[]) {
+	public Lote(Integer numLote, List<Integer> qtdeProd, Imovel imovel, Veiculo veiculo) {
 		this.numLote = numLote;
 		this.qtdeProd=qtdeProd;
+		this.imovel = imovel;
+		this.veiculo = veiculo;
 	}
 	
 	
@@ -59,12 +62,12 @@ public class Lote {
 	}
 
 
-	public Integer[] getQtdeProd() {
+	public List<Integer> getQtdeProd() {
 		return qtdeProd;
 	}
 
 
-	public void setQtdeProd(Integer qtdeProd[]) {
+	public void setQtdeProd(List<Integer> qtdeProd) {
 		this.qtdeProd = qtdeProd;
 	}
 	

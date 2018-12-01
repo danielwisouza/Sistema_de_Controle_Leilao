@@ -1,27 +1,28 @@
 package edu.fatec.sjc;
 
 
+
 public class Lance {
 	
 	private long id;
-	private Integer valor;
+	private Float valor;
 	private Cliente cliente;
-	private Integer numLeilao;
+	private Leilao leilao;
 	
-	public Lance(Integer valor, Cliente cliente, Integer numLeilao) {
+	public Lance(Float valor, Cliente cliente, Leilao leilao) {
 		this.valor = valor;
 		this.cliente = cliente;
-		this.numLeilao = numLeilao;
+		this.leilao = leilao;
 	}
 	
 	
 
 
-	public Integer getValor() {
+	public Float getValor() {
 		return valor;
 	}
 
-	public void setValor(Integer valor) {
+	public void setValor(Float valor) {
 		this.valor = valor;
 	}
 
@@ -44,7 +45,7 @@ public class Lance {
 
 
 
-	/*public Leilao getLeilao() {
+	public Leilao getLeilao() {
 		return leilao;
 	}
 
@@ -53,12 +54,12 @@ public class Lance {
 
 	public void setLeilao(Leilao leilao) {
 		this.leilao = leilao;
-	}*/
+	}
 
 
 
 
-	public Integer getNumLeilao() {
+	/*public Integer getNumLeilao() {
 		return numLeilao;
 	}
 
@@ -67,6 +68,6 @@ public class Lance {
 
 	public void setNumLeilao(Integer numLeilao) {
 		this.numLeilao = numLeilao;
-	} 
+	} */
 
 }

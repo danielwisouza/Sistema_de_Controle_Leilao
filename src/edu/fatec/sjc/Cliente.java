@@ -9,15 +9,15 @@ public class Cliente {
 	private String certificadoDigital;
 	//private Leilao leilao;
 	private Lance lances;
-	private Integer numLeilao;
+	//private Integer numLeilao;
 	
-	public Cliente(String email, String nome, String senha, String certificadoDigital, Integer numLeilao, Lance lances) {
+	public Cliente(String email, String nome, String senha, String certificadoDigital) {
 		this.email = email;
 		this.nome = nome;
 		this.senha = senha;
 		this.certificadoDigital = certificadoDigital;
-		this.numLeilao = numLeilao;
-		this.lances = lances;
+		//this.numLeilao = numLeilao;
+		//this.lances = lances;
 	}
 	
 	public String getNome() {

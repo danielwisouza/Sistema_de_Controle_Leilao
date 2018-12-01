@@ -8,8 +8,8 @@ public class Imovel {
 	private String descricao;
 	
 	
-	public Imovel(String registro, String endereco, String descricao) {
-		
+	public Imovel(Integer id, String registro, String endereco, String descricao) {
+		this.id = id;
 		this.registro = registro;
 		this.endereco = endereco;
 		this.descricao = descricao;
